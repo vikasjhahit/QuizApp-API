@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CollegeModelStoreContainer" CdmEntityContainer="DBModel">
+    <EntitySetMapping Name="Participants">
+      <EntityTypeMapping TypeName="CollegeModel.Participant">
+        <MappingFragment StoreEntitySet="Participant">
+          <ScalarProperty Name="ParticipantID" ColumnName="ParticipantID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="TimeSpent" ColumnName="TimeSpent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="CollegeModel.Question">
+        <MappingFragment StoreEntitySet="Question">
+          <ScalarProperty Name="QuizID" ColumnName="QuizID" />
+          <ScalarProperty Name="Ques" ColumnName="Ques" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="Option1" ColumnName="Option1" />
+          <ScalarProperty Name="Option2" ColumnName="Option2" />
+          <ScalarProperty Name="Option3" ColumnName="Option3" />
+          <ScalarProperty Name="Option4" ColumnName="Option4" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParticipantDetails">
+      <EntityTypeMapping TypeName="CollegeModel.ParticipantDetail">
+        <MappingFragment StoreEntitySet="ParticipantDetails">
+          <ScalarProperty Name="TimeSpent" ColumnName="TimeSpent" />
+          <ScalarProperty Name="SubmissionTime" ColumnName="SubmissionTime" />
+          <ScalarProperty Name="SelectedOption" ColumnName="SelectedOption" />
+          <ScalarProperty Name="QuizID" ColumnName="QuizID" />
+          <ScalarProperty Name="ParticipantID" ColumnName="ParticipantID" />
+          <ScalarProperty Name="ParticipantDetailID" ColumnName="ParticipantDetailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="CollegeModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AccountTypeID" ColumnName="AccountTypeID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="prcGetAllUsersGradeBook" FunctionName="CollegeModel.Store.prcGetAllUsersGradeBook" />
+  </EntityContainerMapping>
+</Mapping>
